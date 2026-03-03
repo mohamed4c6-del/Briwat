@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briwat Mohemed</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#fff8f0;
+  color:#4e342e;
+}
+
+/* Header */
+/* HEADER */
+header{
+  background:#c68642;
+  padding:10px 20px;   /* moins d’espace */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LOGO */
+.logo{
+  display:flex;
+  align-items:center;
+}
+
+.logo img{
+  width:120px;   /* plus grand */
+  height:auto;
+}
+
+/* Intro */
+.intro{
+  text-align:center;
+  padding:20px;
+  font-size:18px;
+}
+
+/* Menu Section */
+.menu{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:20px;
+}
+
+.item{
+  background:white;
+  width:300px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  padding:15px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.item:hover{
+  transform:translateY(-5px);
+}
+
+.item img{
+  width:100%;
+  border-radius:10px;
+}
+
+.item h2{
+  color:#c68642;
+}
+
+button{
+  background:#c68642;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#a86b2d;
+}
+
+#orderMessage{
+  text-align:center;
+  margin:20px;
+  font-weight:bold;
+  color:#2e7d32;
+}
+
+footer{
+  background:#f1e2d0;
+  text-align:center;
+  padding:10px;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logb.png" alt="Briwat Mohemed Logo">
+  </div>
+  <h2 style="color:white; margin:0;">Golden & Crispy Moroccan Briwat</h2>
+</header>
+
+<section class="intro">
+  Choose your favorite briwat and order now!
+</section>
+
+<section class="menu">
+
+  <div class="item">
+    <img src="B1.jpeg" alt="Fish Briwat">
+    <h2>Briwat Bel Hout</h2>
+    <p>Fresh fish with Moroccan spices.</p>
+    <button onclick="order('Fish Briwat')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <img src="B2.jpeg" alt="Meat Briwat">
+    <h2>Briwat Bel Lahm</h2>
+    <p>Traditional meat filling, rich and flavorful.</p>
+    <button onclick="order('Meat Briwat')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <img src="B3.jpeg" alt="Chicken Briwat">
+    <h2>Briwat Bel Djej</h2>
+    <p>Juicy chicken with aromatic herbs.</p>
+    <button onclick="order('Chicken Briwat')">Order Now</button>
+  </div>
+
+</section>
+
+<div id="orderMessage"></div>
+
+<footer>
+  © 2026 Briwat Mohemed
+</footer>
+
+<script>
+function order(item){
+  document.getElementById("orderMessage").textContent =
+  "✔ Your order for " + item + " has been placed successfully!";
+}
+</script>
+
+</body>
+</html>
